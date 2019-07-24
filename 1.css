@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.left
+{
+    background-color:blueviolet;
+    float:left;
+    width:75%; 
+}
+.right
+{
+    background-color:green;   
+     float:right;
+     width:25%; 
+}
+.bottom 
+{
+background-color:yellow;
+width:100%;
+}
