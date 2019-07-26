@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.top
+{
+    background-color:white;
+    width:40%; 
+    height:60px;
+    border:1px solid black;
+    border-block-end-width: 1px solid black;
+
+}
+.middle
+{
+    background-color: white;   
+     width:40%;
+     height:500px;
+     border:1px solid black;
+     table-layout: auto;
+
+}
+.bottom 
+{
+background-color:white;
+width:40%;
+height:60px;
+border:1px solid black;
+border-block-end-width: 1px solid black;
+}
+.Additem
+{
+    text-align-last: left;
+    float:left;
+    padding:20px;
+}
+.cancel{
+    float:left;
+    padding:20px;
+}
+.button1
+{
+    float:right;
+    width: 10%;
+    border-radius:50px;
+    padding:20px;
+} 
+.button2
+{
+    float:right;
+    padding:20px;
+}
+element.style {
+    padding: 30px;
+}
