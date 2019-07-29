@@ -1,8 +1,13 @@
 
 .login-box {
+    margin-top: 60px;
+    position:absolute;
+    margin-left:350px;
+    margin-right:250px;
+    margin-bottom: 50px;
     border-radius:5%;
-    background-color:grey;
-    border: 2px solid black;
+    background-color:white;
+    border: 2px solid grey;
     width:50%;
     height:500px;
   float: center;
@@ -12,29 +17,55 @@
 {
     float: center;
     align-content: center;
-    border-radius: 50px;
-    border:2px solid black;
-    border-block-start-width: 20px;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-block-end-width: 20px;
-    padding: 20px;
+    border-radius: 20px;
+    border:1px solid grey;
+    border-block-start-width: 10px;
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-block-end-width: 10px;
+    padding: 40px;
+    height:400px;
+    
 }
+.Login
+{
+padding-right:257px;
+}
+
 .textbox
 {
     float:left;
-    
-}
-.rememberme 
-{
-    float: left;
+    padding-left:160px;
     
 }
 .forgotpassword
 {
-  float: center;  
+
+  float: right;
+  padding-right:160px;
+}
+button
+{
+
+    padding-right:280px;
+    background-color:#32BDD2;
+    color:white;
+    border: none;
+    margin: 10px;
+    border-radius:10px;
+    width:20%;
+    padding:8px 10px;
+    height:30px;
 }
 .button
 {
-    float:center;
+    padding-right: 260px;
+}
+.Email
+{
+    padding-right: 230px;
+}
+.password   
+{
+    padding-right:265px;
 }
