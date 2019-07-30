@@ -1,0 +1,84 @@
+
+.box
+    {
+        position: absolute;
+        background-color: #F6F8F9;
+        margin-left: 350px;
+        margin-right: 100px;
+        margin-top: 100px;
+        border:1px solid grey;
+        float: center;
+        width: 50%; 
+        padding:20px;
+
+
+
+
+    }
+    .box2
+    {
+        float: center;
+        background-color: white;
+        margin: auto;
+        margin-top:3px;
+        height: 370px;
+        width: 95%; 
+        border-radius: 20px;
+         border: 1px solid grey;
+         box-shadow: 5px 5px gray;
+        padding: 20px;
+    }
+
+    .login
+    {
+        padding-right: 255px;
+    }
+    .email
+    {
+        
+    }
+    .warning1
+    {
+        color: red;
+        font-size: 15px;
+        padding-right: 220px;
+    }
+    
+    .password
+    {
+        size: 30px;
+    }
+    .warning2
+    {
+        color: red;
+        font-size: 15px;
+        padding-right: 220px;
+       
+    }
+    .checkbox
+    {
+        float:left;
+        padding-left: 200px;
+    }
+    
+    
+    .forgotpassword
+    {
+        float:right;
+        padding-right: 200px;
+    }
+    button
+    {
+
+        background-color: #32BDD2;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 8px 10px;
+    }
+    .button
+    {
+        padding-right: 290px;
+        padding-top: 20px;
+    }
