@@ -3,12 +3,13 @@
     position: absolute;
     margin-left: 200px;
     margin-right: 300px;
-    background-color: grey;
-    border: 1px solid black;
-    height: 900px;
+    background-color:#b5b5b5;
+    border: 1px solid #747474;
+    height: 700px;
     width: 60%;
     margin-block-start: 40px;
     margin-bottom: 30px;
+    margin-top: 30px;
     float:center;
 
 }
@@ -18,27 +19,34 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color:white;
-    width:50%; 
-    margin-left: 250px;
+    width:60%; 
+    margin-left: 180px;
     margin-right:300px;
-    margin-top: 294px; 
+    margin-top: 100px; 
     height:50px;
-    border:1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border:1px solid#747474;
     border-block-end-width: 1px solid black;
+    
+
 
 }
 .Additem
 {
-    float:left;
+    color: #747474;
     padding-left: 20px;
+
    
 }
 
-.button1
+.im
 {
-    float:right;
+    
     padding-right:20px;
-    padding-top: 15px;
+
 } 
 
 
@@ -46,53 +54,92 @@
 
 .box3
 {
-    float: center;
+    
     background-color: white;   
-     width:50%;
-     height:500px;
-     border:1px solid black;
-     margin-left: 250px;
+     width:60%;
+     height:400px;
+     border:1px solid #747474;
+     margin-left: 180px;
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding
+
+
+
 }
 .d
-{
+{    
+    color: #747474;
     float: left;
     padding-left:20px; 
-    padding-bottom: 40px;
+
 }
 .qty
 {
+
+    color:#747474;
     float: left;
     padding-left:20px; 
 }
 .fdd
 {
     float: left;
-    padding-left:20px; 
+    padding-left:20px;
+    flex-direction: row;
+    color:#747474;
 }
+.both
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+
+
 .ap
 {
+    color:#747474;
     float: left;
-    padding-left:20px; 
+    padding-left: 20px;
 }
 .box4
 {
 float: center;
 background-color:white;
-width:50%;
+width:60%;
 height:50px;
-border:1px solid black;
-margin-left: 250px;
+border:1px solid #747474;
+margin-left: 180px;
+display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-.cancel{
+.cancel
+{
     float:left;
     padding-left:20px;
     padding-top: 10px;
+    color:#5A5A5A;
 }
-.button2
+button
 {
-    float:right;
-    padding-right:20px;
-    padding-top: 10px;
+
+    background-color: #32BDD2;
+    color: white;
+    border:none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 8px 10px;
+}
+.button
+{
+    padding-right: 15px;
 }
 
