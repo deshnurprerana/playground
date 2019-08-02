@@ -2,70 +2,104 @@
     {
         position: absolute;
         background-color: #F6F8F9;
-        margin-left: 350px;
-        margin-right: 100px;
-        margin-top: 100px;
         border:1px solid grey;
         float: center;
-        width: 50%; 
-        padding:20px;
+        width: 100%; 
+        height:800px;
+
+        
+
     }
     .box2
     {
         float: center;
         background-color: white;
         margin: auto;
-        margin-top:3px;
-        height: 370px;
+        margin-top:45px;
+        height: 710px;
         width: 95%; 
         border-radius: 20px;
          border: 1px solid grey;
          box-shadow: 5px 5px gray;
-        padding: 20px;
+    
     }
     .header
+{
+    font-size: 20px;
+    padding-left: 500px;
+    color: #595959;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+}
+.text
+{
+    font-size: 20px;
+    padding-left: 500px;
+    color: #747474;
+}
+.email
     {
-      
-        padding-top: 20px;
-        padding-left: 220px;
-
+    padding-left:500px;
+    color:#505050;
     }
-    .text
+    .textbox1
     {
-        padding-left: 220px;
+        padding-left: 500px;
     }
-    .email
+    .mm
     {
-        padding-left: 220px;
-    }
-    .textbox
-    {
-        padding-left: 220px;
+    padding-bottom: 30px;
+    color:#505050;
     }
     .warning1
-    {
-        
-        padding-left: 220px;
+{
+    
+        color:#BF574A;
         font-size: 15px;
-        color:red;
-    }
-    .warning2
+        padding-right:500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+
+}
+.ppp
+{
+padding-left: 40px;
+
+}
+.re
+{
+    padding-left: 110px;
+}
+.ppp1
+{
+padding-left: 40px;
+}
+.re1
+{
+    padding-left: 170px;
+}
+.main
+{
+    padding-bottom: 30px;
+}
+button
     {
-        padding-left: 220px;
-        font-size: 15px;
-        color:red;
-    }
-    button
-    {
+
         background-color: #32BDD2;
         color: white;
         border:none;
         border-radius: 20px;
         margin: 10px;
-        padding: 8px 10px;
+        width:120px;
+        height:40px;
+    
     }
     .button
     {
-        padding-left: 210px;
-        padding-top: 10px;
-    }
+        padding-right: 260px;
+        padding-top: 20px;
+        padding-left: 490px;
+    }   
