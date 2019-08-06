@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.left
+{
+    background-color:lightblue;
+    float:left;
+    width:75%; 
+    height:200px;
+}
+.right
+{
+    background-color:pink;   
+     float:right;
+     width:25%;
+     height:200px 
+}
+.bottom 
+{
+background-color:violet;
+width:100%;
+float:right;
+height:100px;
+}
