@@ -13,12 +13,11 @@
 {
     position: relative;
     float: center;
-    width: 70%;
+    width: 60%;
     height: 400px;
-    margin-left: 260px;
-    margin-right: 160px;
-    margin-top: 220px;
-    margin-bottom: 100px;
+    margin-left: 300px;
+    margin-right: 180px;
+    margin-top:150px;
     border-radius: 10px;
     background-color: white;
     border: #FFFFFF;

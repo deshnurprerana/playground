@@ -4,8 +4,21 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="../css/loginpage.css">
 <title> login page </title>
+<script>  
+function init()
+{
+location.href="login warning.html";
+console.info(loginbuttonpressed);
+}
+console.log(init);
+console.log(Element);
+console.log(MouseEvent);
+console.log(location);
+
+</script>
 </head>
 <body>
+
 <div class="box">
         <div class="box2">
             <center>
@@ -32,18 +45,19 @@
                 <label>remember me</label>
             </div>
             <div class="forgotpassword">
-                <a href="#">forgotpassword ?</a>
+                <a href="forgot password.html">forgotpassword ?</a>
             </div> 
             <div style="clear:both"></div>
             <p></p>
            
                 <div class="button">
-            <button type="submit">Login</button>
+                        <button type="button" onclick="init()">Login</button>
                 </div>
             
 
         </div>
     </center>
     </div>
+
 </body>
 </html>

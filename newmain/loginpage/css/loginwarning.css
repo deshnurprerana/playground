@@ -15,14 +15,14 @@
 {
     float: center;
     background-color: white;
-    margin: auto;
-    margin-top:45px;
-    height: 710px;
-    width: 95%; 
+    margin-top:15px;
+    height: 750px;
+    width: 98%; 
     border-radius: 20px;
      border: 1px solid grey;
-     box-shadow: 5px 5px gray;
-
+     box-shadow: 1px 1px gray;
+     margin-left: 15px;
+   
 }
 .login
 {

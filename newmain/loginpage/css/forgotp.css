@@ -16,13 +16,13 @@
     {
         float: center;
         background-color: white;
-        margin: auto;
-        margin-top:3px;
+        margin-top:15px;
         height: 750px;
-        width: 95%; 
+        width: 98%; 
         border-radius: 20px;
-         border: 1px solid#F6F8F9;
-         box-shadow: 5px 5px gray;
+         border: 1px solid grey;
+         box-shadow: 1px 1px gray;
+         margin-left: 15px;
         padding: 20px;
     }
     .header

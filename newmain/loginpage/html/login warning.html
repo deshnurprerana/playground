@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="../css/loginwarning.css">
 <title> loginwarning </title>
+<script>
+    function init(){
+        location.href="myreq.html";
+    }
+    console.log(init);
+    console.log(Elements);
+    console.log(MouseEvent);
+    console.log(location);
+</script>
 </head>
 <body>
 <div class="box">
@@ -48,13 +57,13 @@
                 <label>remember me</label>
             </div>
             <div class="forgotpassword">
-                <a href="#">forgotpassword ?</a>
+                <a href="forgot password.html">forgotpassword ?</a>
             </div> 
             <div style="clear:both"></div>
             <p></p>
            
                 <div class="button">
-            <button type="submit">Login</button>
+            <button type="button" onclick="init()">Login</button>
                 </div>
             
 
