@@ -1,0 +1,53 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+}
+.pu
+{
+    width:100%;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.a
+{
+    float:left;
+    width:10%;
+    color: black;
+    
+
+}
+.b
+{
+    float:right;
+    width: 10%;
+    color:black;
+    
+
+}
+.t
+{
+    float:right;
+}
+.whole
+{
+    float:left;
+    flex: display;
+    justify-content: center;
+    flex-direction: space between;
+
+}
+table{
+    width: 1300px;
+    border:1px solid black;
+    height: 40px;
+}
+th{
+    float: left;
+}
+td
+{
+    float: right;
+}
+
