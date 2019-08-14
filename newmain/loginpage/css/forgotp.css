@@ -31,6 +31,10 @@
         padding-right: 90px;
         color: #747474;
     }
+    #p
+    {
+        cursor: pointer;
+    }
     .text
     {
      padding-left: 30px;

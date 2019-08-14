@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="../css/myrequest2.css">
 <title> My request</title>
+<script>
+    function init()
+    {
+        location.href="popup2.html";
+
+    }
+    console.log(init);
+    console.log(Element);
+    console.log(MouseEvent);
+    console.log(location);
+</script>
 </head>
 <body> 
                <div class="box1">
@@ -28,15 +39,19 @@
                    <div class="logo"> <img src="../images/r.png" alt="search button" style="height:15px; width:20px;">   
                 </div>    
                     </div> 
-                <div class="b">     
-                    <button type="submit">New Request</button>
+                <div class="b">   
+                    <a href="requisiton1.html"  >
+                    <button type="submit" id="p">New Request</button>
+                </a>
                 </div>
             </div>
                 
                 
 
                     <div class="box4">
+                        <a href="popup2.html">
                         <img src="../images/t.png" alt="filter" style="height:25.52px; width: 25.52px; ">
+                        </a>
                         <div class="text">
                             <p>FILTER <br>
                        Showing approved requests</p>
@@ -49,8 +64,10 @@
                              <p>submitted on<br>
                              06 july 2019</p>
                             </div>
+                            <a href="newreqview.html">
                              <img src="../images/q.png" alt="notifications" style="height:46.29px; width:46.29px; border-radius:50px">
-                            <div class="right2">
+                            </a>
+                             <div class="right2">
                              <p> WAITING APPROVAL </p>
                              <div class="circle">
                         
@@ -65,8 +82,11 @@
                     <p>submitted on<br>
                     06 july 2019</p>
                    </div>
+                   <a href="newreqview.html">
+                    
                     <img src="../images/q.png" alt="notifications" style="height:46.29px; width:46.29px; border-radius:50px">
-                   <div class="right2">
+                  </a>
+                    <div class="right2">
                     <p> APPROVED </p>
                     
        <img src="../images/prerana.png" alt="available" style="height:17px; width:17px; border-radius:50px">
@@ -78,8 +98,10 @@
         <p>submitted on<br>
         06 july 2019</p>
        </div>
+       <a href="newreqview.html">
         <img src="../images/q.png" alt="notifications" style="height:46.29px; width:46.29px; border-radius:50px">
-       <div class="right2">
+        </a>
+        <div class="right2">
         <p> DRAFT </p>
         <div class="circle2">
 <img src="../images/yellow2.png" alt="available" style="height:17px; width:17px; border-radius:50px">
@@ -92,8 +114,10 @@
         <p>submitted on<br>
         20 jun 2019</p>
        </div>
+       <a href="newreqview.html">
         <img src="../images/q.png" alt="notifications" style="height:46.29px; width:46.29px; border-radius:50px">
-       <div class="right2">
+       </a>
+        <div class="right2">
         <p> REJECTED </p>
         
 <img src="../images/red.png" alt="available" style="height:17px; width:17px; border-radius:50px">
