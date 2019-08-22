@@ -59,6 +59,10 @@ padding: 0;
     flex-direction: column;
     align-items: center;
 }
+#p
+{
+    cursor: pointer;
+}
 .image
 {
     padding-top: 70px;

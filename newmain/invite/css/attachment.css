@@ -24,6 +24,10 @@
     font-size: 18px;
 
 }
+#p
+{
+    cursor: pointer;
+}
 .box2
 {
    border: 1px solid #f6f8f9;

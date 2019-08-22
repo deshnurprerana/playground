@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 10%;
+    width: 12%;
     justify-content: space-between;
     padding-right: 20px;
 
@@ -37,7 +37,7 @@
     height: 150px;
     background-color: #F6F8F9;
     border: 1px solid #F6F8F9;
-    
+
 
 }
 .left
@@ -131,5 +131,3 @@ padding-top: 40px;
     border:1px solid grey;
     background-color:#F6F8F9;
     margin-left: 85px;
-    
-}

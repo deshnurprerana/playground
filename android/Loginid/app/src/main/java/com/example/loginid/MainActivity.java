@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         forgotpassword=findViewById(R.id.fp);
         warning1=findViewById(R.id.warning1);
         warning2=findViewById(R.id.warning2);
-        text1=findViewById(R.id.tv1);
+        text1=findViewById(R.id.textview);
         text2=findViewById(R.id.tv2);
 
         loginbutton.setOnClickListener(new View.OnClickListener() {

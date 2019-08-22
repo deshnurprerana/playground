@@ -19,6 +19,10 @@ padding: 0;
     justify-content: space-between;
     height: 50px;
 }
+#p
+{
+    cursor: pointer;
+}
 .right
 {
     display: flex;

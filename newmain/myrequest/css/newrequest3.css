@@ -144,26 +144,27 @@ padding-right: 90px;
     width: 9%;
     justify-content: space-between;
     padding-left: 20px; 
-​
-}
+​}
 .bottom
 {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+
 }
 .save
 {
     padding-left: 40px;
-    padding-top: 100px;
+    padding-top: 80px;
     color: #595959;
     font-size: 12px;
 }
 .button
 {
-    padding-top: 100px;
+
     padding-left: 1200px;
+    padding-top: 100px;
 }
 button
 {
@@ -173,6 +174,9 @@ button
     background-color: #32BDD2;
     border-radius: 50px;
 }
-
+#p
+{
+    cursor: pointer;
+}
 
 
