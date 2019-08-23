@@ -74,20 +74,20 @@
                 android:id="@+id/img1"
                 android:layout_width="63dp"
                 android:layout_height="38dp"
-                android:layout_marginStart="124dp"
-                android:layout_marginTop="56dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="48dp"
                 app:layout_constraintStart_toEndOf="@+id/tv1"
                 app:layout_constraintTop_toBottomOf="@+id/button"
                 app:srcCompat="@drawable/icon" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="288dp"
-                android:layout_height="62dp"
+                android:layout_width="314dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="34dp"
-                android:layout_marginTop="38dp"
+                android:layout_marginTop="39dp"
                 android:background="@drawable/search"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6">
+                app:layout_constraintTop_toBottomOf="@+id/button">
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
