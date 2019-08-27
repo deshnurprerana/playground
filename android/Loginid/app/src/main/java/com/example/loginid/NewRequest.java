@@ -1,38 +1,33 @@
 package com.example.loginid;
 
-import android.app.AlertDialog;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import android.view.View;
-
-import androidx.core.view.GravityCompat;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ListPopupWindow;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListPopupWindow;
-import android.widget.SearchView;
-import android.widget.TextView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class NewRequest extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ListPopupWindow listPopupWindow;
     ImageView filter;
     TextView tv3;
+    ListView listview;
+    ImageView notification;
 
 
     @Override
@@ -40,7 +35,13 @@ public class NewRequest extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_request);
         filter=findViewById(R.id.filter);
-
+        listview=findViewById(R.id.lv);
+        notification=findViewById(R.id.noti);
+        String title[]={"PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056"};
+        String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
+        String statusText[]={"APPROVED","APPROVED","APPROVED","APPROVED","APPROVED"};
+        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,statusText);
+        listview.setAdapter(listAdapter);
         String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
                 "REJECTED"};
         tv3=findViewById(R.id.tv3);

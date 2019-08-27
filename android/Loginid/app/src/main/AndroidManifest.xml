@@ -13,7 +13,7 @@
             android:name=".NewRequest"
             android:label="@string/title_activity_new_request"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".request" />
+        <activity android:name=".Request" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".MainActivity">
             <intent-filter>
