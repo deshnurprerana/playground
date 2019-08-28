@@ -25,7 +25,7 @@ public class Request extends AppCompatActivity {
         setContentView(R.layout.activity_request);
         image1=findViewById(R.id.i1);
         image2=findViewById(R.id.i2);
-        button=findViewById(R.id.button);
+        button=findViewById(R.id.btn);
 
     }
 }

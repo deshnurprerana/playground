@@ -1,10 +1,12 @@
 package com.example.loginid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -28,15 +30,17 @@ public class NewRequest extends AppCompatActivity
     TextView tv3;
     ListView listview;
     ImageView notification;
+    Button btn;
 
 
-    @Override
+   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_request);
         filter=findViewById(R.id.filter);
         listview=findViewById(R.id.lv);
         notification=findViewById(R.id.noti);
+        btn=findViewById(R.id.btn);
         String title[]={"PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056"};
         String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
         String statusText[]={"APPROVED","APPROVED","APPROVED","APPROVED","APPROVED"};
@@ -45,7 +49,14 @@ public class NewRequest extends AppCompatActivity
         String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
                 "REJECTED"};
         tv3=findViewById(R.id.tv3);
+       btn.setOnClickListener(new View.OnClickListener() {
 
+           @Override
+           public void onClick(View view) {
+               Intent intent=new Intent(getApplicationContext(),Recycler.class);
+               startActivity(intent);
+           }
+       });
         listPopupWindow = new ListPopupWindow(
                 getApplicationContext());
         listPopupWindow.setAdapter(new ArrayAdapter(
@@ -59,6 +70,7 @@ public class NewRequest extends AppCompatActivity
                 listPopupWindow.show();
             }
         });
+
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);

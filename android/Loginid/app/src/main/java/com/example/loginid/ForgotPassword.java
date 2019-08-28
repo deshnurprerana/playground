@@ -25,7 +25,7 @@ public class ForgotPassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
-        button=findViewById(R.id.button);
+        button=findViewById(R.id.btn);
         warning1=findViewById(R.id.warning1);
         warning2=findViewById(R.id.warning2);
         text1=findViewById(R.id.textview);
@@ -36,7 +36,7 @@ public class ForgotPassword extends AppCompatActivity {
         final View alertView=getLayoutInflater().inflate(R.layout.fpdb,null);
         alertBuilder.setView(alertView);
         final AlertDialog alertDialog=alertBuilder.create();
-        button =findViewById(R.id.button);
+        button =findViewById(R.id.btn);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
