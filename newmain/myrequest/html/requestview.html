@@ -4,7 +4,7 @@
 <head>
 	<title>Requestview</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="../css/preview.css">
+	<link rel="stylesheet" type="text/css" href="../css/requestview.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
@@ -26,26 +26,50 @@
 	</div>
 	<div class="main">
 	
-            <div class="boxy">
-                    <div class="req">
-                        <p><b>REQUISITION </b></p>
+
+			<div class="bx">
+                    <div class="bx1">
+                        <img src="../images/m.png" alt="arrow" style="height:33px;transform: rotate(90deg); width:33px; border-radius:50px;margin-left: 15px; margin-top: 15px;">
                     </div>
-                    <div class="image">
-                        <img src="../images/mm.png" style="height:400px; padding-bottom: 5%; width:70px">
-                    </div>
-				</div>
-				
+                    <div class="bx2">
+                        
+       <img src="../images/home.png" alt="home" id="p" style="height:33px; width:33px; border-radius:50px;margin-left: 15px; margin-top: 15px;">  
+    <a href="inbox.html">
+       <img src="../images/message.png" alt="home" style="height:33px; width:33px; border-radius:50px;margin-left: 15px; margin-top: 15px;">  
+	   </a>
+	 
+	   <img src="../images/cal.png" alt="home" style="height:33px; width:33px; border-radius:50px;margin-left: 15px; margin-top: 15px;">
+        <img src="../images/request-icons-22.png" alt="home" style="height:33px; width:33px; border-radius:50px;margin-left: 15px; margin-top: 15px;">
+        <img src="../images/dir.png" alt="home" style="height:33px; width:33px; border-radius:50px;margin-left: 15px; margin-top: 15px;">
+                      
+    
+    </div>
+                </div>
 	<div class="para">
 
 
 		<div class="request-view-flex">
-			<p id="big-text">PREVIEW</p>
+			<p id="big-text">REQUEST VIEW</p>
 			<span id="small-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis, tortor sit
 				amet
 				tempor vehicula.</span>
 		</div>
 
-		
+		<div class="rounded-flex">
+			<div class="rounded-flex-one">
+				<span id="rounded-flex-line1">REQUEST#</span>
+				<span id="rounded-flex-line2">PUR - 2019 - 056</span>
+			</div>
+			<div class="rounded-flex-two">
+				<span id="rounded-flex-line1">SUBMITTED</span>
+				<span id="rounded-flex-line2">06, July 2019</span>
+			</div>
+			<div class="rounded-flex-three">
+				<span id="rounded-flex-line1">STATUS</span>
+				<span id="rounded-flex-line2">AWAITING APPROVAL</span>
+			</div>
+		</div>
+
 
 
 		<div class="note-flex">
@@ -278,29 +302,10 @@
 
 		</div>
 
-		<div class="reliable">
-				<div class="save">
-					<a href="../../invite/html/requisitionacknowledge.html" style="color:#595959;">SAVE
-						DRAFT</a>
-				</div>
-				<div>
-					<a href="../../invite/html/requisitionapproval.html"
-						style="color:#32BDD2; padding-right: 20px;">Back</a>
-					<button type="submit" onclick="nextPage()">Next-></button>
-				</div>
-
-				<script>
-					function nextPage() {
-						document.location = "../../invite/html/acknowledge2.html";
-					}
-				</script>
-			</div>
-
 	</div>
-	
+	<div style="clear: both"></div>
 
 </div>
-<div style="clear: both"></div>
 </body>
 
 </html>

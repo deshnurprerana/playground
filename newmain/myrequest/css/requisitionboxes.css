@@ -13,7 +13,7 @@ body{
 
 
 
-.head-flex{
+.head{
     padding-top:0.6%;
     padding-bottom: 0.6%;
     background-color:#FFFFFF;
@@ -22,7 +22,7 @@ body{
     /* border:1px solid green; */
 }
 
-.left-top-flex{
+.left{
     display: flex;
     float: left;
     justify-content:center;
@@ -32,7 +32,7 @@ body{
     padding-left: 1%;
 }
   
-.right-top-flex{
+.right{
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -180,26 +180,62 @@ body{
   font-size: 12px;
   border-radius: 10px;
 }
-.file-selector-right-flex{
+.cloudmain{
   display: flex;
   background: #32BDD2;
   width: 25%;
 }
 
-.file-selector-right-flex-rect{
+.cloud{
   display: flex;
   flex-direction:column;
   align-items: center;
   border:2px dashed white;
   margin: auto;
-  width: 50%;
+  width: 80%;
   padding: 5px;
   color: #FFFFFF;
 }
 
 
+.boxyy{
+  display: flex;
+  padding-top:40px;
+  padding-bottom: 15px;
+}
 
-.ref-flex{
+
+.cat{
+  display: flex;
+  flex-direction:column;
+  margin-left: 30px;
+  border:1px solid #D5E2E8;
+}
+
+.boxmain{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #D5E2E8;
+  color: #595959;
+  font-size: 12px;
+  padding:4px;
+ 
+}
+
+#modi{
+  color: #747474;
+  font-size: 10px;
+  padding:3px;
+}
+
+.delete{
+  display: flex;
+  border:1px solid #D5E2E8;
+  align-items: center;
+  padding:4px;
+}
+
+.quo{
   display: flex;
   flex-direction:row;
   justify-content: space-between; 
@@ -210,7 +246,8 @@ body{
   font-size: 12px;
 }
 
-.save a{
+
+.save{
   text-decoration: none;
   color:#595959;
   border-bottom: 1px solid #595959;

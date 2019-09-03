@@ -1,4 +1,11 @@
-.box
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+
+
+/* .box
     {
         position: absolute;
         background-color: #F6F8F9;
@@ -11,25 +18,40 @@
 
 
 
+    } */
+    body {
+        font-family: "Roboto";
+        background: #F6F8F9;
+        /* border: 1px solid red; */
+      }
+      
+    .whole
+    {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        align-content:center ;
     }
     .box2
     {
-        float: center;
-        background-color: white;
-        margin-top:15px;
-        height: 750px;
-        width: 98%; 
-        border-radius: 20px;
-         border: 1px solid #F6F8F9;
-         box-shadow: 1px 1px #F6F8F9;
-         margin-left: 15px;
-        padding: 20px;
+        margin:auto;
+        width: 96%;
+        margin-top:2%;
+        background: #FFFFFF;
+        box-shadow: 1px 1px #f1f0f0;
+        border-radius: 10px;
+    
     }
     .header
     {
-        padding-top: 130px;
-        padding-right: 90px;
+        padding-top: 4%;
+        padding-right: 100px;
         color: #747474;
+        font-size: 16px;
+    }
+    .texta
+    {
+        padding-top: 3%;
     }
     #p
     {
@@ -37,17 +59,12 @@
     }
     .text
     {
-     padding-left: 30px;
+     padding-left:80px;
      font-size: 19.5px;
      color: #747474;
+     padding-top: 1%;
     }
-    .texta
-    {
-        font-size: 19.5px; 
-        padding-right: 150px;
-        color: #747474;
-        
-    }
+    
     .email
     {
         padding-top: 30px;
@@ -72,7 +89,10 @@
     }
     .button
     {
-        padding-right: 310px; 
+       padding-right: 33%; 
         padding-top: 50px;
         width:180px;
     }
+    button:hover {
+        opacity: 0.8;
+      }

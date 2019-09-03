@@ -1,11 +1,19 @@
+
+  
+ * {
+     margin: 0px; 
+     padding: 0px; 
+     box-sizing: border-box;
+ }
+ 
 .box1
 {
     position: absolute;
     background-color:#b5b5b5;
     border: 1px solid #747474;
-    height: 800px;
+    height: auto;
     width: 100%;
-    margin-block-start: 40px;
+    font-family: 'Roboto';
     float:center;
 
 }
@@ -19,10 +27,10 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color:white;
-    width:40%; 
-    margin-left: 500px;
-    margin-right:300px;
-    margin-top: 100px; 
+    width:50%; 
+    margin-left: 330px;
+    margin-right:500px;
+    margin-top: 11%; 
     height:60px;
     display: flex;
     flex-direction: row;
@@ -30,6 +38,7 @@
     justify-content: space-between;
     border:1px solid #FCFCFC;
     border-block-end-width: 1px solid #FCFCFC;
+
     
     
 
@@ -38,7 +47,7 @@
 .Additem
 {
     color: #747474;
-    padding-left: 20px;
+    padding-right:70%;
 
    
 }
@@ -57,10 +66,10 @@
 {
     
     background-color: white;   
-     width:40%;
+     width:50%;
      height:500px;
      border:1px solid #B5B5B5;
-     margin-left: 500px;
+     margin-left: 330px;
      display: flex;
     flex-direction: column;
     align-items: center ;
@@ -149,16 +158,17 @@ padding-top: 40px;
 {
 float: center;
 background-color:white;
-width:40%;
+width:50%;
 height:60px;
 border:1px solid #FCFCFC;
-margin-left: 500px;
+margin-left: 330px;
 display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    margin-bottom: 12%;
 }
 
 .cancel
@@ -210,6 +220,6 @@ button
     flex-direction: row;
     font-size: 10px;
     align-content: center;
-    margin-right: 30px;
+    margin-left: 20%;
     
 }

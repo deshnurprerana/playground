@@ -13,6 +13,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Roboto';
 }
 .right
 {
@@ -47,7 +48,7 @@
     float: center;
     border-bottom-left-radius: 10%;
     border-top-left-radius: 10%;
-    margin-left: 20px;
+    
 }
 .bx1
 {
@@ -75,7 +76,8 @@
     border: 1px solid #DFEBEF;
     background-color: white;
     float: center;
-    margin-left:100px;
+    font-family: 'Roboto';
+    
 }
 button
 {
@@ -99,6 +101,7 @@ button
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Roboto';
 }
 .img1
 {
@@ -113,6 +116,7 @@ button
 {
     font-size: 14px;
     color: #747474;
+    font-family: 'Roboto';
 }
 .abc1
 {
@@ -135,6 +139,7 @@ button
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Roboto';
 }
 .img1
 {
@@ -161,29 +166,32 @@ button
 }
 .box6
 {
-   width:60%;
+   width:70%;
    height: auto;
     border:1px solid white;
     border-left-color: #EDEAEA;
     margin-left:130px;
+    font-family: 'Roboto';
     
 }
 .box7
 {
-    width: 1030px;
+    width: 100%;
     height: 180px;
     background-color: #F4F8FA;
     border: 1px solid #EDEAEA;
     margin-top: 10px;
+    font-family: 'Roboto';
 }
 .box8
 {
     border: 1px solid #EDEAEA;
     background-color: white;
-    width:950px;
+    width:80%;
     height: 72px;
     margin-top: 28px;
     margin-left: 30px;
+    font-family: 'Roboto';
 ​
 }
 ​
@@ -207,6 +215,10 @@ button
     border: 8px solid white;
     border-left-color: #41A6DF;
 ​
+}
+#p
+{
+    cursor: pointer;
 }
 .box10
 {

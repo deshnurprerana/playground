@@ -1,46 +1,64 @@
-
-.box
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+/* .box
     {
         position: absolute;
         background-color: #F6F8F9;
         border:1px solid #F6F8F9;
         float: center;
         width: 100%; 
-        height:800px;
+
+        box-shadow: 1px 1px #f1f0f0;
 
         
-
+    } */
+    body {
+        font-family: "Roboto";
+        background: #F6F8F9;
+        /* border: 1px solid red; */
+      }
+      
+    .whole
+    {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        align-content:center ;
     }
+
     .box2
     {
-        float: center;
-        background-color: white;
-
-        margin-top:15px;
-        height: 750px;
-        width: 98%; 
-        border-radius: 20px;
-         border: 1px solid #F6F8F9;
-         box-shadow: 1px 1px gray;
-         margin-left: 15px;
+        margin:auto;
+        width: 96%;
+        margin-top:2%;
+    
+        margin-bottom:1%;
+        background: #FFFFFF;
+        box-shadow: 1px 1px #f1f0f0;
+        border-radius: 10px;
     
     }
     #p
     {
-cursor: pointer;
+      cursor: pointer;
     }
     
     .login
     {
-        padding-right: 210px;
+        padding-right: 16%;
+        padding-bottom: 3%;
         display: flex;
         justify-content: center;
-        padding-top:160px;
+        padding-top:3%;
         color:#595959;
     }
+    
     .email
     {
-    padding-right: 190px;
+    padding-left: 40px;
     }
     .textbox1
     {
@@ -53,7 +71,7 @@ cursor: pointer;
     }
     .password
     {
-    padding-right: 250px;
+    padding-right: 18%;
     color:#505050;
     
     }
@@ -66,19 +84,20 @@ cursor: pointer;
 
     .checkbox
     {
-        float:left;
-        padding-left: 640px;
-        padding-top: 20px;
+        display: flex;
+        width:25%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         color: #505050;
+        padding-top: 2%;
     }
     
-    
-    .forgotpassword
+    .fp
     {
-        float:right;
-        padding-right: 600px;
-        padding-top:20px;
+        padding-left: 40px;
     }
+
 
     button
     {
@@ -100,14 +119,20 @@ cursor: pointer;
     }
     .box4
     {
-        position: absolute;30px;
+        position: absolute;
         background-color: #F6F8F9;
         margin-left: 350px;
         border:1px solid grey;
         float: center;
         width: 50%; 
-        padding:20px;
-
+        padding:5%;
+  
+    }
+    #p
+    {
+        cursor: pointer;
     }
 
-    
+    button:hover {
+        opacity: 0.8;
+      }

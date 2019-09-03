@@ -1,47 +1,77 @@
-.box
-{
-    margin: auto;
-    border:1px solid #f6f8f9;
-    width: 100%;  
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
 }
-.box1
-{
-    margin: auto;
-    border:1px solid #f6f8f9;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+
+body{
+    margin:auto;
+    background-color: #F6F8F9;
+    box-shadow: 1px 1px 1px 2px #D8D3D3;
+    font-family: 'Roboto';
 }
-.right
-{
+
+
+
+.head-flex{
+    padding-top:0.6%;
+    padding-bottom: 0.6%;
+    background-color:#FFFFFF;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 1px 1px #D8D3D3;
+    /* border:1px solid green; */
+}
+.left-top-flex{
     display: flex;
-    flex-direction: row;
+    float: left;
+    justify-content:center;
+    flex-direction:row;
     align-items: center;
-    width: 10%;
-    justify-content: space-between;
-    padding-right: 30px;
-​
+    width: 5%;
+    padding-left: 1%;
+}
+  
+.right-top-flex{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:flex-end;
+    width: 95%;
+    padding-right: 2.2%;
+}
+
+.right-top-flex-data{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;   
+}
+
+.right-top-flex-data-img{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+    width: 30%;
+    padding: 2px;  
 }
 .box2
 {
-   border: 1px solid #f6f8f9;
+   border:1px solid #f6f8f9;
    background-color: #F6F8F9;
-   height: 670px;
-   width: 100%;
+   width:90%;
    float: center;
 }
 .box3
 {
     margin: auto;
     float: center;
-   width: 95%;
+   width: 90%;
    height: 600px;
    border: 1px solid #f6f8f9;
    background-color: white;
-   margin-left: 40px;
-   margin-top: 35px;
+   margin-left:10%;
+   margin-top: 3%;
 }
 #p
 {
@@ -68,7 +98,7 @@ padding-right: 90px;
 }
 .image
 {
-    padding-top:100px;
+    padding-top:6%;
 }
 .box5
 {
@@ -79,7 +109,7 @@ padding-right: 90px;
 }
 .note
 {
-    padding-top: 20px;
+    margin-top: 6%;
     padding-left: 40px;
 }
 .text
@@ -87,6 +117,7 @@ padding-right: 90px;
     padding-left: 40px;
     color: #747474;
     font-size: 12px;
+    margin-bottom: 2%;
 }
 .label
 {
@@ -104,6 +135,7 @@ padding-right: 90px;
     padding-left: 40px;
     color: #747474;
     font-size: 12px;
+    margin-top:3%;
 }
 .column
 {
@@ -116,32 +148,32 @@ padding-right: 90px;
 }
 .bullet
 {
-   
+   margin-top: 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 5%;
+    width: 9%;
     justify-content: space-between;
     padding-left: 20px; 
 }
 .bullet1
 {
-   
+   margin-top: 2%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 14.9%;
+    width: 24%;
     justify-content: space-between;
     padding-left: 20px; 
     
 }
 .bullet2
 {
-   
+   margin-top: 2%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 9%;
+    width: 15%;
     justify-content: space-between;
     padding-left: 20px; 
 ​}
@@ -163,7 +195,7 @@ align-items:center;
 .button
 {
 
-    padding-left: 1200px;
+    padding-left:0%;
     padding-top: 100px;
 }
 button
@@ -179,4 +211,59 @@ button
     cursor: pointer;
 }
 
+.right-top-flex-data-txt{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;  
+    padding: 2px; 
+    color:#595959;
+    font-size:14px;
+    font-weight: bold;
+}
 
+.right-top-flex-data-last-img{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    padding: 2px;
+}
+
+#image{
+    border-radius: 50%;
+}
+
+
+
+
+.data-flex{
+  width: 96%;
+  margin:auto;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  background-color: #FFFFFF;
+  box-shadow: 1px 1px 1px 2px #D8D3D3;
+
+}
+.right-main-flex{
+    display: flex;
+    flex-direction:column;
+    padding-left: 50px;
+    padding-right: 35px;
+    width: 90%;
+    justify-content: flex-start;
+  }
+  
+  .right-main-data-flex{
+    display: flex;
+    flex-direction:column;
+    background: #F0F0F0;
+    width: 100%;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top: 40px;
+  }

@@ -3,19 +3,19 @@
 
 <head>
 	<title>Requisition</title>
-	<link rel="stylesheet" type="text/css" href="../css/attachment2.css">
+	<link rel="stylesheet" type="text/css" href="../css/requisition3-18.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
 <body>
 
-	<div class="head-flex">
-		<div class="left-top-flex">
+	<div class="head">
+		<div class="left">
 			<img src="../images/line.png" width="35" height="35">
 		</div>
 
 
-		<div class="right-top-flex">
+		<div class="right">
 			<div class="right-top-flex-data">
 				<div class="right-top-flex-data-img"><img src="../images/p.jpg" width="30" height="30" id="image"></div>
 				<div class="right-top-flex-data-txt"><span>Prerana D</span></div>
@@ -26,14 +26,14 @@
 
 	<div class="outer-flex">
 		<div class="data-flex">
-			<div class="vertical-main">
+			<div class="reqmain">
 
-				<div class="vertical-text-flex">
+				<div class="req">
 					<span>requisition</span>
 				</div>
 
-				<div class="vertical-img-flex">
-					<img src="../images/request-image-33.png" width="70">
+				<div class="mark">
+					<img src="../images/mark.png" width="70">
 				</div>
 			</div>
 
@@ -55,15 +55,10 @@
 							</div>
 						</div>
 						<div>
-                            
-							<button type="submit" id="browse" onclick="upload()">BROWSE</button>
+							<button type="submit" id="browse">BROWSE</button>
 						</div>
 					</div>
-					<script>
-						function upload() {
-							document.location = "../../myrequest/html/requisition3-18.html";
-						}
-					</script>
+
 
 					<div class="file-selector-right-flex">
 
@@ -74,14 +69,43 @@
 
 					</div>
 
-                </div>
-                
+				</div>
 
-				<div style="min-height: 25vh"></div>
+				<div class="upload-flex">
+					<div class="upload-left-flex">
+						<div class="upload-left-top">
+							<div class="upload-left-top-data">
+								<span id="padding">abc0037429023.doc</span>
+								<span id="padding">976 KB</span>
+							</div>
+						</div>
+						<div class="upload-left-bottom">
+							<span>write the description…</span>
+						</div>
+					</div>
 
-				<div class="ref-flex">
+					<div class="upload">
+						<button class="upload-btn" onclick="fileShow()">UPLOAD</button>
+					</div>
+					<script>
+						function fileShow() {
+							document.location = "requisition3.html";
+						}
+					</script>
+				</div>
+
+				<div class="warningmain">
+					<img src="../images/request-icons-07.png" width="30px" height="25px">
+					<div class="warning">
+						<span id="modi">This field is required.</span>
+					</div>
+				</div>
+
+				<div style="min-height: 10vh"></div>
+
+				<div class="reliable">
 					<div class="save">
-						<a href="requisitionacknowledge.html" style="color:#595959;">SAVE
+						<a href="../../REQUISITION FORM 6-20-3/html/requisition-ack-3.html" style="color:#595959;">SAVE
 							DRAFT</a>
 					</div>
 					<div>
@@ -99,8 +123,8 @@
 			</div>
 
 		</div>
-
-
+	</div>
+	<div style="min-height: 3vh"></div>
 </body>
 
 </html>

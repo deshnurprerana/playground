@@ -1,109 +1,133 @@
-.box
-    {
-        position: absolute;
-        background-color: #F6F8F9;
-        border:1px solid #F6F8F9;
-        float: center;
-        width: 100%; 
-        height:800px;
-
+*{
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+ /* .box
+        {
+            position: absolute;
+            background-color: #F6F8F9;
         
-
-    }
-    .box2
-    {
-        float: center;
-        background-color: white;
-        margin-top:15px;
-        height: 750px;
-        width: 98%; 
-        border-radius: 20px;
-         border: 1px solid #F6F8F9;
-         box-shadow: 1px 1px gray;
-         margin-left: 15px;
+            border:1px solid #F6F8F9;
+            float: center;
+            width: 100%; 
+            padding:20px;
+            height:800px;
     
-    }
-    #p
-    {
-        cursor: pointer;
-    }
-    .header
+    
+    
+        } */
+        body {
+            font-family: "Roboto";
+            background: #F6F8F9;
+            /* border: 1px solid red; */
+          }
+          
+        .whole
+        {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            align-content:center ;
+        }
+        .box2
+        {
+            margin:auto;
+            width: 96%;
+            margin-top:2%;
+            margin-bottom: 2%;
+            background: #FFFFFF;
+            box-shadow: 1px 1px #f1f0f0;
+            border-radius: 10px;
+        
+        }
+        .header
+        {
+            padding-top:2%;
+            padding-right: 100px;
+            color: #747474;
+            font-size: 16px;
+        }
+        .texta
+        {
+            padding-top: 2%;
+        }
+        #p
+        {
+            cursor: pointer;
+        }
+        .text
+        {
+         padding-left: 80px;
+         font-size: 19.5px;
+         color: #747474;
+         padding-top: 1%;
+        }
+        
+        .email
+        {
+            padding-top: 30px;
+            padding-right:370px; 
+            color: #747474;
+        }
+        
+        .textbox
+        {
+            padding-right:10px;
+        }
+        #p
+        {
+            cursor: pointer;
+        }
+        button
+    
+        {
+            background-color: #32BDD2;
+            color: white;
+            border:none;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 8px 10px;
+            width:100px;
+        }
+        .button
+        {
+           padding-right: 33%; 
+            padding-top:3%;
+            width:180px;
+        }
+        .main
 {
-    font-size: 20px;
-    padding-left: 500px;
-    color: #595959;
-    padding-top: 50px;
+    padding-top: 1%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 10%;
 }
-.text
-{
-    font-size: 20px;
-    padding-left: 500px;
-    color: #747474;
-}
-.email
-    {
-    padding-left:500px;
-    color:#505050;
-    }
-    .textbox1
-    {
-        padding-left: 500px;
-    }
-    .mm
-    {
-    padding-bottom: 30px;
-    color:#505050;
-    }
-    .warning1
+.warning1
 {
     
         color:#BF574A;
         font-size: 15px;
-        padding-right:500px;
+        padding-right: 100px;
         display: flex;
         flex-direction: row;
         justify-content: center;
     
 
 }
-.ppp
+.warning2
 {
-padding-left: 40px;
-
-}
-.re
-{
-    padding-left: 110px;
-}
-.ppp1
-{
-padding-left: 40px;
-}
-.re1
-{
-    padding-left: 170px;
-}
-.main
-{
-    padding-bottom: 30px;
-}
-button
-    {
-
-        background-color: #32BDD2;
-        color: white;
-        border:none;
-        border-radius: 20px;
-        margin: 10px;
-        width:120px;
-        height:40px;
     
-    }
-    .button
-    {
-        padding-right: 260px;
-        padding-top: 20px;
-        padding-left: 490px;
-    }   
+        color:#BF574A;
+        font-size: 15px;
+        padding-right: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+
+}
+        button:hover {
+            opacity: 0.8;
+          }
