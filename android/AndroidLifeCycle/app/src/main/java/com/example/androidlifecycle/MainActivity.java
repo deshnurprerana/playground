@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate(Bundle) called");
+        Toast.makeText(this, "hello how are you", Toast.LENGTH_LONG).show();
         setContentView(R.layout.activity_main);
 
 
@@ -23,27 +24,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart() called");
+        Toast.makeText(this, "on start is working", Toast.LENGTH_LONG).show();
     }
     @Override
     public void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause() called");
+        Toast.makeText(this, "on pause is working", Toast.LENGTH_LONG).show();
     }
     @Override
     public void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume() called");
+        Toast.makeText(this, "on resume is working", Toast.LENGTH_LONG).show();
     }
     @Override
     public void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop() called");
+        Toast.makeText(this, "on stop is working", Toast.LENGTH_LONG).show();
     }
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy() called");
+        Toast.makeText(this, "on destroy is working", Toast.LENGTH_LONG).show();
     }
 
 }
