@@ -41,7 +41,7 @@
                 android:layout_height="27dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="40dp"
-                android:text="My Request"
+                android:text="@string/my_request"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,8 @@
                 android:layout_marginTop="48dp"
                 app:layout_constraintStart_toEndOf="@+id/tv1"
                 app:layout_constraintTop_toBottomOf="@+id/btn"
-                app:srcCompat="@drawable/icon" />
+                app:srcCompat="@drawable/icon"
+                android:contentDescription="@string/todo" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="314dp"
@@ -111,7 +112,8 @@
                 android:layout_marginTop="26dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/v" />
+                app:srcCompat="@drawable/v"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -119,7 +121,7 @@
                 android:layout_height="28dp"
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="26dp"
-                android:text="FILTER"
+                android:text="@string/filter"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/filter"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -130,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="21dp"
-                android:text="Showing approved requests."
+                android:text="@string/showing_approved_requests"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/filter"

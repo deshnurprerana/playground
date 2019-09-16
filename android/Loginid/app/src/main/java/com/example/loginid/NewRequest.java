@@ -41,12 +41,13 @@ public class NewRequest extends AppCompatActivity
         listview=findViewById(R.id.lv);
         notification=findViewById(R.id.noti);
         btn=findViewById(R.id.btn);
+
         String title[]={"PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056"};
-        String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
+       String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
         String statusText[]={"APPROVED","APPROVED","APPROVED","APPROVED","APPROVED"};
         ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,statusText);
         listview.setAdapter(listAdapter);
-        String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
+      String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
                 "REJECTED"};
         tv3=findViewById(R.id.tv3);
        btn.setOnClickListener(new View.OnClickListener() {

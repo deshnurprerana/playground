@@ -38,7 +38,8 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/line" />
+                app:srcCompat="@drawable/line"
+                android:contentDescription="@string/todo" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,8 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="37dp"
-                android:autoText="false"
-                android:text="My Request"
+                android:text="@string/my_request"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
                 android:layout_marginStart="83dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/request"
-                android:text="NEW REQUEST"
+                android:text="@string/new_request"
                 android:textColor="@android:color/white"
                 app:layout_constraintStart_toEndOf="@+id/textview"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -93,7 +93,8 @@
                 android:layout_marginTop="72dp"
                 app:layout_constraintStart_toEndOf="@+id/textView10"
                 app:layout_constraintTop_toBottomOf="@+id/btn"
-                app:srcCompat="@drawable/icon" />
+                app:srcCompat="@drawable/icon"
+                android:contentDescription="@string/todo" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="330dp"
@@ -125,7 +126,8 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/v" />
+                app:srcCompat="@drawable/v"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tv1"
@@ -133,7 +135,7 @@
                 android:layout_height="12dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="FILTER"
+                android:text="@string/filter"
                 app:layout_constraintStart_toEndOf="@+id/i2"
                 app:layout_constraintTop_toTopOf="parent" />
 
