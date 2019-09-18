@@ -1,79 +1,33 @@
 package com.example.loginid;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.ListPopupWindow;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
-public class NewRequest extends AppCompatActivity
+import android.view.View;
+
+import androidx.core.view.GravityCompat;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+
+import android.view.MenuItem;
+
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import android.view.Menu;
+
+public class Requisition1 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    ListPopupWindow listPopupWindow;
-    ImageView filter;
-    TextView tv3;
-    ListView listview;
-    ImageView notification;
-    Button newrequest;
 
-
-   @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_request);
-        filter=findViewById(R.id.filter);
-        listview=findViewById(R.id.lv);
-        notification=findViewById(R.id.noti);
-        newrequest=findViewById(R.id.newrequestbutton);
-
-        String title[]={"PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056"};
-       String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
-        String statusText[]={"APPROVED","APPROVED","APPROVED","APPROVED","APPROVED"};
-        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,statusText);
-        listview.setAdapter(listAdapter);
-      String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
-                "REJECTED"};
-        tv3=findViewById(R.id.tv3);
-       newrequest.setOnClickListener(new View.OnClickListener() {
-
-           @Override
-           public void onClick(View view) {
-               Intent intent=new Intent(getApplicationContext(),Requisition1.class);
-               startActivity(intent);
-           }
-       });
-        listPopupWindow = new ListPopupWindow(
-                getApplicationContext());
-        listPopupWindow.setAdapter(new ArrayAdapter(
-                getApplicationContext(),
-                R.layout.filter, products));
-        listPopupWindow.setAnchorView(filter);
-        listPopupWindow.setModal(true);
-        filter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listPopupWindow.show();
-            }
-        });
-
-
-
+        setContentView(R.layout.activity_requisition1);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -106,7 +60,7 @@ public class NewRequest extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.new_request, menu);
+        getMenuInflater().inflate(R.menu.requisition1, menu);
         return true;
     }
 

@@ -64,7 +64,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/btn"
+                android:id="@+id/newrequestbutton"
                 android:layout_width="119dp"
                 android:layout_height="43dp"
                 android:layout_marginStart="83dp"
@@ -92,7 +92,7 @@
                 android:layout_marginStart="188dp"
                 android:layout_marginTop="72dp"
                 app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/btn"
+                app:layout_constraintTop_toBottomOf="@+id/newrequestbutton"
                 app:srcCompat="@drawable/icon"
                 android:contentDescription="@string/todo" />
 
@@ -103,7 +103,7 @@
                 android:layout_marginTop="48dp"
                 android:background="@drawable/search"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn">
+                app:layout_constraintTop_toBottomOf="@+id/newrequestbutton">
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
