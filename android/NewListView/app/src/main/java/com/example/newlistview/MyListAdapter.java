@@ -5,8 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import com.example.newlistview.Model.RequestModel;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -14,24 +17,18 @@ import java.util.ArrayList;
 class MyListAdapter extends BaseAdapter
 {
     public Context context;
-    public ArrayList<String>titles;
-    public ArrayList<String>dates;
-    public ArrayList<String>statusTexts;
+    ArrayList<RequestModel> arlist;
 
-
-
-    public MyListAdapter(Context context , ArrayList<String> title, ArrayList<String> date, ArrayList<String> statusText) {
+    public MyListAdapter(Context context , ArrayList<RequestModel>requestlist) {
        this.context=context;
-       this.titles= title;
-       this.dates=date;
-       this.statusTexts=statusText;
+       this.arlist=requestlist;
 
 
     }
 
         @Override
         public int getCount() {
-            return titles.size();
+            return arlist.size();
         }
 
         @Override
@@ -48,18 +45,22 @@ class MyListAdapter extends BaseAdapter
         public View getView(int position, View convertView, ViewGroup parent)
 
             {
-                View view = LayoutInflater.from(context).inflate(R.layout.newlistview,parent,false);
+                View view1 = LayoutInflater.from(context).inflate(R.layout.newlistview,parent,false);
                 TextView titles1,dates1,statusTexts1;
-                titles1=view.findViewById(R.id.title);
-                dates1=view.findViewById(R.id.date);
-                statusTexts1=view.findViewById(R.id.statusText);
+                ImageView noti;
+                titles1=view1.findViewById(R.id.title);
+                dates1=view1.findViewById(R.id.date);
+                statusTexts1=view1.findViewById(R.id.statusText);
+                noti=view1.findViewById(R.id.ivnoti);
+                RequestModel req=this.arlist.get(position);
 
 
-                titles1.setText(titles.get(position));
-                dates1.setText(dates.get(position));
-                statusTexts1.setText(statusTexts.get(position));
 
-               return view;
+                titles1.setText(String.valueOf(req.getRequestnumber()));
+                dates1.setText(String.valueOf(req.getDescription()));
+                statusTexts1.setText(String.valueOf(req.getRequestStatus()));
+                 noti.setImageResource(R.drawable.notification);
+               return view1;
 
         }
 
