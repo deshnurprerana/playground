@@ -52,7 +52,7 @@ public class MyRecyclerListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             title = itemView.findViewById(R.id.title);
             date = itemView.findViewById(R.id.date);
             statusText = itemView.findViewById(R.id.statusText);
-            imageView = itemView.findViewById(R.id.noti);
+            imageView = itemView.findViewById(R.id.ivnoti);
         }
 
         public void setUpData(String titles, String dates, String status) {

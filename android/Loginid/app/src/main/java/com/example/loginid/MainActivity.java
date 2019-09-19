@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button loginbutton;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     TextView text1;
     TextView text2;
     EditText em;
+    EditText password;
 
 
     @Override
@@ -31,20 +33,26 @@ public class MainActivity extends AppCompatActivity {
         warning2=findViewById(R.id.warning2);
         text1=findViewById(R.id.textview);
         text2=findViewById(R.id.tv2);
+        password=findViewById(R.id.password1);
          em=findViewById(R.id.em);
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (em.getText().toString().equals("")) {
+                if ((em.getText().toString().equals("Prerana"))&&(password.getText().toString().equals("Prerana123"))) {
+                    Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_LONG).show();
+                    Intent intent1 = new Intent(getApplicationContext(), NewRequest.class);
+                    startActivity(intent1);
+
+
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "enter correct login details", Toast.LENGTH_LONG).show();
+
                     warning1.setVisibility(View.VISIBLE);
                     warning2.setVisibility(View.VISIBLE);
                     text1.setVisibility(View.VISIBLE);
                     text2.setVisibility(View.VISIBLE);
 
-
-                } else {
-                    Intent intent1 = new Intent(getApplicationContext(), NewRequest.class);
-                    startActivity(intent1);
                 }
             }
         });

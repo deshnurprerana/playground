@@ -72,7 +72,7 @@
             app:layout_constraintTop_toBottomOf="@+id/em" />
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/password1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -93,7 +93,7 @@
             android:layout_marginStart="8dp"
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintTop_toBottomOf="@+id/password1"
             app:srcCompat="@drawable/warning2"
             android:contentDescription="TODO" />
 
@@ -106,7 +106,7 @@
             android:textColor="@android:color/holo_red_dark"
             android:visibility="gone"
             app:layout_constraintStart_toEndOf="@+id/warning2"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+            app:layout_constraintTop_toBottomOf="@+id/password1" />
 
         <TextView
             android:id="@+id/fp"

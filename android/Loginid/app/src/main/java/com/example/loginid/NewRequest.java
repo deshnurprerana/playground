@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,9 +20,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.loginid.Global.RequestStatus;
+import com.example.loginid.Model.RequestModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.ArrayList;
 
 public class NewRequest extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,14 +44,52 @@ public class NewRequest extends AppCompatActivity
         setContentView(R.layout.activity_new_request);
         filter=findViewById(R.id.filter);
         listview=findViewById(R.id.lv);
-        notification=findViewById(R.id.noti);
+        notification=findViewById(R.id.ivnoti);
         newrequest=findViewById(R.id.newrequestbutton);
+       ArrayList<RequestModel> reqlist=new ArrayList<>();
 
-        String title[]={"PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056"};
-       String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
-        String statusText[]={"APPROVED","APPROVED","APPROVED","APPROVED","APPROVED"};
-        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,statusText);
+
+       RequestModel requestModel=new RequestModel();
+
+
+       requestModel.setRequestnumber("PUR-2019-056");
+       requestModel.setRequestStatus(RequestStatus.APPROVED);
+       requestModel.setDescription("06-jul-2019");
+       reqlist.add(requestModel);
+
+
+       requestModel =new RequestModel();
+       requestModel =new RequestModel();
+       requestModel.setRequestnumber("PUR-2019-056");
+       requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
+       requestModel.setDescription("06-jul-2019");
+       reqlist.add(requestModel);
+       requestModel =new RequestModel();
+       requestModel.setRequestnumber("PUR-2019-056");
+       requestModel.setRequestStatus(RequestStatus.DRAFT);
+       requestModel.setDescription("06-jul-2019");
+       reqlist.add(requestModel);
+       requestModel =new RequestModel();
+       requestModel.setRequestnumber("PUR-2019-056");
+       requestModel.setRequestStatus(RequestStatus.CLOSED);
+       requestModel.setDescription("06-jul-2019");
+       reqlist.add(requestModel);
+
+//        String title[]={"PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056"};
+//       String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
+//        String statusText[]={"APPROVED","APPROVED","APPROVED","APPROVED","APPROVED"};
+        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),reqlist);
         listview.setAdapter(listAdapter);
+       listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           @Override
+           public void onItemClick(AdapterView<?> a, View v, int position,
+                                   long id) {
+
+               Intent intent = new Intent(NewRequest.this, newlist.class);
+
+               startActivity(intent);
+           }
+       });
       String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
                 "REJECTED"};
         tv3=findViewById(R.id.tv3);

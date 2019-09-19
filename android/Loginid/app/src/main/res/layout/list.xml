@@ -42,15 +42,16 @@
         android:id="@+id/statusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:text="APPROVED"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout6"
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout6"
-        android:layout_width="7dp"
-        android:layout_height="14dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/green"
@@ -60,9 +61,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/noti"
-        android:layout_width="35dp"
-        android:layout_height="31dp"
+        android:id="@+id/ivnoti"
+        android:layout_width="37dp"
+        android:layout_height="39dp"
         android:layout_marginStart="248dp"
         android:layout_marginTop="52dp"
         app:layout_constraintStart_toEndOf="@+id/date"
