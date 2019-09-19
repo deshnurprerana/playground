@@ -34,18 +34,18 @@ public class MainActivity extends AppCompatActivity {
         reqlist.add(requestModel);
 
 
-
-
+        requestModel =new RequestModel();
+        requestModel =new RequestModel();
         requestModel.setRequestnumber("PUR-2019-056");
         requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
         requestModel.setDescription("06-jul-2019");
         reqlist.add(requestModel);
-
+        requestModel =new RequestModel();
         requestModel.setRequestnumber("PUR-2019-056");
         requestModel.setRequestStatus(RequestStatus.DRAFT);
         requestModel.setDescription("06-jul-2019");
         reqlist.add(requestModel);
-        ;
+        requestModel =new RequestModel();
         requestModel.setRequestnumber("PUR-2019-056");
         requestModel.setRequestStatus(RequestStatus.CLOSED);
         requestModel.setDescription("06-jul-2019");
