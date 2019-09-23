@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".newlist"></activity>
+        <activity
+            android:name=".RequestView"
+            android:label="@string/title_activity_request_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".MainRequestFragment"
+            android:label="@string/title_activity_main_request_fragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".newlist" />
         <activity
             android:name=".Requisition1"
             android:label="@string/title_activity_requisition1"

@@ -2,9 +2,31 @@ package com.example.loginid;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import com.example.loginid.Global.RequestStatus;
+import com.example.loginid.Model.RequestModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+
 import android.view.View;
+
+import androidx.appcompat.widget.ListPopupWindow;
+import androidx.core.view.GravityCompat;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+
+import android.view.MenuItem;
+
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,23 +35,11 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.ListPopupWindow;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import com.example.loginid.Global.RequestStatus;
-import com.example.loginid.Model.RequestModel;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
-
 import java.util.ArrayList;
 
-public class NewRequest extends AppCompatActivity
+public class MainRequestFragment extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
     ListPopupWindow listPopupWindow;
     ImageView filter;
     TextView tv3;
@@ -38,69 +48,69 @@ public class NewRequest extends AppCompatActivity
     Button newrequest;
 
 
-   @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_request);
+        setContentView(R.layout.activity_main_request_fragment);
         filter=findViewById(R.id.filter);
         listview=findViewById(R.id.lv);
         notification=findViewById(R.id.ivnoti);
         newrequest=findViewById(R.id.newrequestbutton);
-       ArrayList<RequestModel> reqlist=new ArrayList<>();
+        ArrayList<RequestModel> reqlist=new ArrayList<>();
 
 
-       RequestModel requestModel=new RequestModel();
+        RequestModel requestModel=new RequestModel();
 
 
-       requestModel.setRequestnumber("PUR-2019-056");
-       requestModel.setRequestStatus(RequestStatus.APPROVED);
-       requestModel.setDescription("06-jul-2019");
-       reqlist.add(requestModel);
+        requestModel.setRequestnumber("PUR-2019-056");
+        requestModel.setRequestStatus(RequestStatus.APPROVED);
+        requestModel.setDescription("06-jul-2019");
+        reqlist.add(requestModel);
 
 
-       requestModel =new RequestModel();
-       requestModel =new RequestModel();
-       requestModel.setRequestnumber("PUR-2019-056");
-       requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
-       requestModel.setDescription("06-jul-2019");
-       reqlist.add(requestModel);
-       requestModel =new RequestModel();
-       requestModel.setRequestnumber("PUR-2019-056");
-       requestModel.setRequestStatus(RequestStatus.DRAFT);
-       requestModel.setDescription("06-jul-2019");
-       reqlist.add(requestModel);
-       requestModel =new RequestModel();
-       requestModel.setRequestnumber("PUR-2019-056");
-       requestModel.setRequestStatus(RequestStatus.CLOSED);
-       requestModel.setDescription("06-jul-2019");
-       reqlist.add(requestModel);
+        requestModel =new RequestModel();
+        requestModel =new RequestModel();
+        requestModel.setRequestnumber("PUR-2019-056");
+        requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
+        requestModel.setDescription("06-jul-2019");
+        reqlist.add(requestModel);
+        requestModel =new RequestModel();
+        requestModel.setRequestnumber("PUR-2019-056");
+        requestModel.setRequestStatus(RequestStatus.DRAFT);
+        requestModel.setDescription("06-jul-2019");
+        reqlist.add(requestModel);
+        requestModel =new RequestModel();
+        requestModel.setRequestnumber("PUR-2019-056");
+        requestModel.setRequestStatus(RequestStatus.CLOSED);
+        requestModel.setDescription("06-jul-2019");
+        reqlist.add(requestModel);
 
 //        String title[]={"PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056"};
 //       String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
 //        String statusText[]={"APPROVED","APPROVED","APPROVED","APPROVED","APPROVED"};
         ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),reqlist);
         listview.setAdapter(listAdapter);
-       listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-           @Override
-           public void onItemClick(AdapterView<?> a, View v, int position,
-                                   long id) {
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> a, View v, int position,
+                                    long id) {
 
-               Intent intent = new Intent(NewRequest.this, RequestView.class);
+                Intent intent = new Intent(MainRequestFragment.this, RequestView.class);
 
-               startActivity(intent);
-           }
-       });
-      String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
+                startActivity(intent);
+            }
+        });
+        String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
                 "REJECTED"};
         tv3=findViewById(R.id.tv3);
-       newrequest.setOnClickListener(new View.OnClickListener() {
+        newrequest.setOnClickListener(new View.OnClickListener() {
 
-           @Override
-           public void onClick(View view) {
-               Intent intent=new Intent(getApplicationContext(),Requisition1.class);
-               startActivity(intent);
-           }
-       });
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),Requisition1.class);
+                startActivity(intent);
+            }
+        });
         listPopupWindow = new ListPopupWindow(
                 getApplicationContext());
         listPopupWindow.setAdapter(new ArrayAdapter(
@@ -192,4 +202,23 @@ public class NewRequest extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    public void myfunc(View view)
+    {
+        Fragment f=new Fragment1Request();
+        FragmentManager fragmentManager1=getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction1=fragmentManager1.beginTransaction();
+        fragmentTransaction1.replace(R.id.fragment1,f);
+        fragmentTransaction1.commit();
+    }
+    public void myfunc1(View view)
+    {
+        Fragment f1=new Fragment2Request();
+        FragmentManager fragmentManager2=getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction2=fragmentManager2.beginTransaction();
+        fragmentTransaction2.replace(R.id.fragment2,f1);
+        fragmentTransaction2.commit();
+    }
+
+
+
 }

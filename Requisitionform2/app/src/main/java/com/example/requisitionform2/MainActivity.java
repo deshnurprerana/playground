@@ -1,14 +1,14 @@
-package com.example.loginid;
+package com.example.requisitionform2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class newlist extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newlist);
+        setContentView(R.layout.activity_main);
     }
 }
