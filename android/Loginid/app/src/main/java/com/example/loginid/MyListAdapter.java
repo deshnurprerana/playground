@@ -60,6 +60,7 @@ class MyListAdapter extends BaseAdapter {
         dates1.setText(String.valueOf(req.getDescription()));
         statusTexts1.setText(String.valueOf(req.getRequestStatus()));
         noti.setImageResource(R.drawable.notification);
+
         return view1;
 
 

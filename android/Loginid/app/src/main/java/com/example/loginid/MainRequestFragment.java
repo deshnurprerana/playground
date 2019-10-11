@@ -1,16 +1,15 @@
 package com.example.loginid;
 
-import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
-import com.example.loginid.Global.RequestStatus;
 import com.example.loginid.Model.RequestModel;
+import com.example.loginid.RequestDelegate.RequestDelegateInterface;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
 
-import androidx.appcompat.widget.ListPopupWindow;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 
@@ -22,110 +21,27 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class MainRequestFragment extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
-    ListPopupWindow listPopupWindow;
-    ImageView filter;
-    TextView tv3;
-    ListView listview;
-    ImageView notification;
-    Button newrequest;
+        implements NavigationView.OnNavigationItemSelectedListener , RequestDelegateInterface {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_request_fragment);
-        filter=findViewById(R.id.filter);
-        listview=findViewById(R.id.lv);
-        notification=findViewById(R.id.ivnoti);
-        newrequest=findViewById(R.id.newrequestbutton);
-        ArrayList<RequestModel> reqlist=new ArrayList<>();
 
-
-        RequestModel requestModel=new RequestModel();
-
-
-        requestModel.setRequestnumber("PUR-2019-056");
-        requestModel.setRequestStatus(RequestStatus.APPROVED);
-        requestModel.setDescription("06-jul-2019");
-        reqlist.add(requestModel);
-
-
-        requestModel =new RequestModel();
-        requestModel =new RequestModel();
-        requestModel.setRequestnumber("PUR-2019-056");
-        requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
-        requestModel.setDescription("06-jul-2019");
-        reqlist.add(requestModel);
-        requestModel =new RequestModel();
-        requestModel.setRequestnumber("PUR-2019-056");
-        requestModel.setRequestStatus(RequestStatus.DRAFT);
-        requestModel.setDescription("06-jul-2019");
-        reqlist.add(requestModel);
-        requestModel =new RequestModel();
-        requestModel.setRequestnumber("PUR-2019-056");
-        requestModel.setRequestStatus(RequestStatus.CLOSED);
-        requestModel.setDescription("06-jul-2019");
-        reqlist.add(requestModel);
-
-//        String title[]={"PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056","PUR-2019-056"};
-//       String date[]={"06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019","06-Jul-2019"};
-//        String statusText[]={"APPROVED","APPROVED","APPROVED","APPROVED","APPROVED"};
-        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),reqlist);
-        listview.setAdapter(listAdapter);
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> a, View v, int position,
-                                    long id) {
-
-                Intent intent = new Intent(MainRequestFragment.this, RequestView.class);
-
-                startActivity(intent);
-            }
-        });
-        String[] products={"CLEAR", "APPROVED", "DRAFT","AWAITING",
-                "REJECTED"};
-        tv3=findViewById(R.id.tv3);
-        newrequest.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),Requisition1.class);
-                startActivity(intent);
-            }
-        });
-        listPopupWindow = new ListPopupWindow(
-                getApplicationContext());
-        listPopupWindow.setAdapter(new ArrayAdapter(
-                getApplicationContext(),
-                R.layout.filter, products));
-        listPopupWindow.setAnchorView(filter);
-        listPopupWindow.setModal(true);
-        filter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                listPopupWindow.show();
-            }
-        });
-
-
+        Fragment1Request fragment1Request = new Fragment1Request();
+        fragment1Request.setRequestDelegateInterface(this);
+        FragmentManager manager = getSupportFragmentManager();
+        manager.popBackStackImmediate(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.potrait, fragment1Request);
+        transaction.commit();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -202,23 +118,55 @@ public class MainRequestFragment extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    public void myfunc(View view)
-    {
-        Fragment f=new Fragment1Request();
-        FragmentManager fragmentManager1=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction1=fragmentManager1.beginTransaction();
-        fragmentTransaction1.replace(R.id.fragment1,f);
-        fragmentTransaction1.commit();
+
+    @Override
+    public void onConfigurationChanged(Configuration configuration){
+        super.onConfigurationChanged(configuration);
+        if(configuration.orientation==Configuration.ORIENTATION_PORTRAIT)
+        {
+            Fragment2Request fragment2Request = new Fragment2Request();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.replace(R.id.potrait, fragment2Request);
+            fragmentTransaction.commit();
+
+        } else {
+            Fragment2Request fragment2Request = new Fragment2Request();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.popBackStackImmediate(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.replace(R.id.landscape, fragment2Request);
+            fragmentTransaction.commit();
+        }
+        }
+
+
+
+
+
+    @Override
+    public void onRequestItemClick(RequestModel requestModel) {
+        int orientation = this.getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Fragment2Request fragment2Request = new Fragment2Request();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.replace(R.id.potrait, fragment2Request);
+            fragmentTransaction.commit();
+            ((Fragment2Request) fragment2Request).setData(requestModel);
+
+        } else {
+            Fragment2Request fragment2Request = new Fragment2Request();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.popBackStackImmediate(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.replace(R.id.landscape, fragment2Request);
+            fragmentTransaction.commit();
+            ((Fragment2Request) fragment2Request).setData(requestModel);
+        }
     }
-    public void myfunc1(View view)
-    {
-        Fragment f1=new Fragment2Request();
-        FragmentManager fragmentManager2=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction2=fragmentManager2.beginTransaction();
-        fragmentTransaction2.replace(R.id.fragment2,f1);
-        fragmentTransaction2.commit();
-    }
-
-
-
 }

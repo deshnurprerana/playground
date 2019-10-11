@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Requisitiontwo"
+            android:label="@string/title_activity_requisitiontwo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".RequestView"
             android:label="@string/title_activity_request_view"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainRequestFragment"
             android:label="@string/title_activity_main_request_fragment"

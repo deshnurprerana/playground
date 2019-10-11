@@ -1,5 +1,6 @@
 package com.example.loginid;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,14 +21,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Button;
 
 public class Requisition1 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    Button requisitionbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requisition1);
+        requisitionbutton=findViewById(R.id.requisitionbutton);
+
+        requisitionbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intenttwo=new Intent(Requisition1.this,Requisitiontwo.class);
+                startActivity(intenttwo);
+            }
+        });
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
